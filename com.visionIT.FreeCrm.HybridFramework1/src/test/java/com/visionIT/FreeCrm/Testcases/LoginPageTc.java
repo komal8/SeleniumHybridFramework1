@@ -9,11 +9,8 @@ import org.testng.annotations.Test;
 import com.visionIT.FreeCrm.Pageobject.LoginPage;
 import com.visionIT.FreeCrm.Testbase.BaseClass;
 
-
-
-
-public class LoginPageTc extends BaseClass {
-	public LoginPage login;
+public class LoginPageTC extends BaseClass {
+	LoginPage login;
 
 	@BeforeMethod
 	public void setUp() {
@@ -26,57 +23,13 @@ public class LoginPageTc extends BaseClass {
 		Reporter.log("Navigating to url:  "+ url, true );
 		browserStartUp(browserName, url);
 		
-		//Reporter.log("initializing login page object ", true);
+		Reporter.log("initializing login page object ", true);
 		
 		login = new LoginPage(driver);
 		
 	}
-
-	/*@Test(priority = 1)
-	public void verifyLoginPageTitleTest() {
-		
-		//logger=extent.createTest("Verify title of the loginpage test..");
-		
-		String actualPageTitle = login.verifyLoginPageTitle();
-		System.out.println(actualPageTitle);
-		
-	}*/
-
-	/*@Test(priority = 2)
-	public void verifyCRMPROLogoTest() {
-		Assert.assertTrue(login.verifyCRMPROLogo(), "CRMOPRO logo on login page is not displayed");
-	}*/
-
-	/*@Test(priority = 3)
-	public void navigateToCreateAnAccountPageTest() {
-		SignUpPage signUp = login.navigateToCreateAnAccountPage();
-
-	}*/
-	
-	  @Test(priority = 4,dataProvider="getExcelData")
-	  public void verifyloginintoCrmProTest(String uname,String upass) { 
-		logger=extent.createTest("LoginToFreeCrm Test");
-		logger.info("Before going into Login application");
-		login.verifyloginToCrmPro(uname, upass);
-		if(driver.getTitle().contains("CRMPRO"))
-		{
-			Assert.assertTrue(true);
-			logger.pass("login successfully");
-			
-		}
-		else {
-			System.out.println("not able to login into app");
-			logger.fail("login is failed");
-			Assert.assertTrue(false);
-		}
-	  }
-		
-	  
-	 
-	 
-
-/*	@Test(priority = 4, dataProvider = "getExcelData")
-	public void verifyloginToCrmProTest(String uname, String upwd) {
+	@Test(priority = 4, dataProvider = "getExcelData")
+	public void verifyloginToCrmPro(String uname, String upass) {
 		
 		Reporter.log("Create login Test before start it..", true);
 		
@@ -84,7 +37,7 @@ public class LoginPageTc extends BaseClass {
 		
 		logger.info("before going to login into crm ...");
 		
-		login.verifyloginToCrmPro(uname, upwd);
+		login.verifyloginToCrmPro(uname, upass);
 		
 		//driver.switchTo().frame("mainpanel");
 		
@@ -107,16 +60,65 @@ public class LoginPageTc extends BaseClass {
 		Reporter.log("login Test completed and checkout the results in reports..", true);
 
 	}
-*/
+
 	@DataProvider
 	public Object[][] getExcelData() {
 
-		
-		Object[][] data = excelDataProvider.getExcelData("Index1");
+		Object[][] data = excelDataProvider.getExcelData("Sheet1");
 
 		return data;
 	}
 
+
+
+
+	/*@Test(priority = 1)
+	public void verifyLoginPageTitleTest() {
+		
+		//logger=extent.createTest("Verify title of the loginpage test..");
+		
+		String actualPageTitle = login.verifyLoginPageTitle();
+		System.out.println(actualPageTitle);
+		
+	}*/
+
+	/*@Test(priority = 2)
+	public void verifyCRMPROLogoTest() {
+		Assert.assertTrue(login.verifyCRMPROLogo(), "CRMOPRO logo on login page is not displayed");
+	}*/
+
+	/*@Test(priority = 3)
+	public void navigateToCreateAnAccountPageTest() {
+		SignUpPage signUp = login.navigateToCreateAnAccountPage();
+
+	}*/
+	/*
+	 * @Test(priority = 4) public void verifyloginToCrmProTest() { DashBoardPage
+	 * dashBoard = login.verifyloginToCrmPro(prop.getProperty("username"),
+	 * prop.getProperty("userpass")); }
+	 */
+
+	/*
+	 * @Test(priority = 4) public void verifyloginToCrmProTest() {
+	 * 
+	 * String username= excelDataProvider.getStringCellData("login", 1, 0);
+	 * 
+	 * String userpwd= excelDataProvider.getStringCellData(4, 1, 1);
+	 * 
+	 * login.verifyloginToCrmPro(username,userpwd);
+	 * 
+	 * if(driver.getTitle().contains("CRMPRO")) {
+	 * 
+	 * Assert.assertTrue(true);
+	 * 
+	 * login.verifyLogoutCrmPro(); } else {
+	 * 
+	 * System.out.println("Not able to login into an application"); }
+	 * 
+	 * }
+	 */
+
+	
 }
 
 

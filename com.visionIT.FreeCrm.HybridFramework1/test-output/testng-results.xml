@@ -5,12 +5,12 @@
       <![CDATA[Initializing pre object like configData , excelData provider and html reports .. ]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="71" started-at="2019-10-06T13:17:55 IST" finished-at="2019-10-06T13:17:55 IST">
+  <suite name="Default suite" duration-ms="85" started-at="2019-10-12T21:51:29 IST" finished-at="2019-10-12T21:51:29 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="71" started-at="2019-10-06T13:17:55 IST" finished-at="2019-10-06T13:17:55 IST">
-      <class name="com.visionIT.FreeCrm.Testcases.LoginPageTc">
-        <test-method status="FAIL" signature="intitialize()[pri:0, instance:com.visionIT.FreeCrm.Testcases.LoginPageTc@ba8d91c]" name="intitialize" is-config="true" duration-ms="121" started-at="2019-10-06T13:17:55 IST" finished-at="2019-10-06T13:17:55 IST">
+    <test name="Default test" duration-ms="85" started-at="2019-10-12T21:51:29 IST" finished-at="2019-10-12T21:51:29 IST">
+      <class name="com.visionIT.FreeCrm.Testcases.LoginPageTC">
+        <test-method status="FAIL" signature="intitialize()[pri:0, instance:com.visionIT.FreeCrm.Testcases.LoginPageTC@ba8d91c]" name="intitialize" is-config="true" duration-ms="134" started-at="2019-10-12T21:51:29 IST" finished-at="2019-10-12T21:51:29 IST">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[org/apache/poi/poifs/filesystem/FileMagic]]>
@@ -58,7 +58,7 @@ at java.lang.ClassLoader.loadClass(Unknown Source)
             </line>
           </reporter-output>
         </test-method> <!-- intitialize -->
-        <test-method status="SKIP" signature="verifyloginintoCrmProTest(java.lang.String, java.lang.String)[pri:4, instance:com.visionIT.FreeCrm.Testcases.LoginPageTc@ba8d91c]" name="verifyloginintoCrmProTest" duration-ms="0" started-at="2019-10-06T13:17:55 IST" data-provider="getExcelData" finished-at="2019-10-06T13:17:55 IST">
+        <test-method status="SKIP" signature="verifyloginToCrmPro(java.lang.String, java.lang.String)[pri:4, instance:com.visionIT.FreeCrm.Testcases.LoginPageTC@ba8d91c]" name="verifyloginToCrmPro" duration-ms="0" started-at="2019-10-12T21:51:29 IST" data-provider="getExcelData" finished-at="2019-10-12T21:51:29 IST">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[java.lang.NullPointerException]]>
@@ -92,7 +92,7 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 Caused by: java.lang.NullPointerException
-at com.visionIT.FreeCrm.Testcases.LoginPageTc.getExcelData(LoginPageTc.java:115)
+at com.visionIT.FreeCrm.Testcases.LoginPageTC.getExcelData(LoginPageTC.java:67)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -106,8 +106,8 @@ at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(Met
           </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyloginintoCrmProTest -->
-      </class> <!-- com.visionIT.FreeCrm.Testcases.LoginPageTc -->
+        </test-method> <!-- verifyloginToCrmPro -->
+      </class> <!-- com.visionIT.FreeCrm.Testcases.LoginPageTC -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

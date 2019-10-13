@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.visionIT.FreeCrm.Testcases.LoginPageTc">
+      <class name="com.visionIT.FreeCrm.Testcases.LoginPageTC">
         <methods>
-          <include name="verifyloginintoCrmProTest"/>
+          <include name="verifyloginToCrmPro"/>
           <include name="tearDown"/>
           <include name="intitialize"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.visionIT.FreeCrm.Testcases.LoginPageTc -->
+      </class> <!-- com.visionIT.FreeCrm.Testcases.LoginPageTC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

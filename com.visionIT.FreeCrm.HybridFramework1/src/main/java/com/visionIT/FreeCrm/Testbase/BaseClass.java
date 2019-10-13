@@ -47,7 +47,7 @@ public class BaseClass {
 			
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(new File(dirPath+"//Reports//FreeCrm_"+Helper1.getCurrentDataTime()+".html"));
 		
-			extent=new ExtentReports();
+			ExtentReports extent=new ExtentReports();
 			
 			extent.attachReporter(reporter);
 			

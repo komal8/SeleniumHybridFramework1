@@ -13,7 +13,7 @@ public class ExcelDataProvider {
 	public ExcelDataProvider() {
 
 		try {
-			File fs = new File(".//Testdata1//ExcelData.xlsx");
+			File fs = new File(".//Testdata1//testdataNew.xlsx");
 
 			FileInputStream fins = new FileInputStream(fs);
 
@@ -98,10 +98,11 @@ public class ExcelDataProvider {
 			for (int j = 0; j < cols; j++) {
 
 				excelData[i][j] = sheet.getRow(i + 1).getCell(j).toString();
+			//return excelData;
 			}
 		}
-
 		return excelData;
+
 	}
 
 }
